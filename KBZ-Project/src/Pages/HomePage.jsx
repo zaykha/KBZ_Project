@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import Sidebar from '../Components/Sidebar/Sidebar';
+import ApiCarousel from './HomePageComponents/ApiCarousel/ApiCarousel';
 import Clients from './HomePageComponents/Clients/Clients';
 import Details from './HomePageComponents/Details/Details';
 import Hero from './HomePageComponents/Hero/Hero';
+import Newslettersub from './HomePageComponents/Newslettersub/Newslettersub';
 import PlatformCTA from './HomePageComponents/PlatformCTA/PlatformCTA';
 import Services from './HomePageComponents/Services/Services';
 
@@ -24,6 +26,8 @@ const HomePage = () => {
         <Services/>
         <Clients/>
         <PlatformCTA/>
+        {/* <ApiCarousel/> */}
+        <Newslettersub/>
     </>
   )
 }
