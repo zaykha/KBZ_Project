@@ -5,7 +5,12 @@ import {
     ClientCard,
     ClientCardDiv,
     ClientDiv, ClientHeader, ClientImg, ClientPhrase 
-} from './Clientsstyle'
+} from './Clientsstyle';
+import NAmerica from '../../../assets/north-america.png';
+import SAmerica from '../../../assets/south-america.png';
+import Europe from '../../../assets/europe.png';
+import Asia from '../../../assets/asia.png';
+
 
 const Clients = () => {
   return (
@@ -17,7 +22,7 @@ const Clients = () => {
             and Crypto Currency Solution Companies including Exchanges and Market Places.</ClientPhrase>
         <ClientCardDiv>
             <ClientCard>
-                <ClientImg></ClientImg>
+                <ClientImg src={NAmerica}></ClientImg>
                 <CDescriptionHeader>North America & Carribbean</CDescriptionHeader>
                 <CDescription>
                     <ul>
@@ -29,7 +34,7 @@ const Clients = () => {
                 </CDescription>
             </ClientCard>
             <ClientCard>
-                <ClientImg></ClientImg>
+                <ClientImg src={SAmerica}></ClientImg>
                 <CDescriptionHeader>Central & South America</CDescriptionHeader>
                 <CDescription>
                     <ul>
@@ -46,7 +51,7 @@ const Clients = () => {
                 </CDescription>
             </ClientCard>
             <ClientCard>
-                <ClientImg></ClientImg>
+                <ClientImg src={Europe}></ClientImg>
                 <CDescriptionHeader>Europe & Africa</CDescriptionHeader>
                 <CDescription>
                     <ul>
@@ -61,7 +66,7 @@ const Clients = () => {
                 </CDescription>
             </ClientCard>
             <ClientCard>
-                <ClientImg></ClientImg>
+                <ClientImg src={Asia}></ClientImg>
                 <CDescriptionHeader>Middle East & Far East</CDescriptionHeader>
                 <CDescription>
                     <ul>

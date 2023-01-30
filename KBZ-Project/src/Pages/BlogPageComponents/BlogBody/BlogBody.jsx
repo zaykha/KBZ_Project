@@ -80,6 +80,21 @@ const BlogBody = () => {
                     <BlogCTA>Read More</BlogCTA>
                 </BlogCard>
 
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
             </BlogContent>
 
 

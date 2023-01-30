@@ -22,7 +22,10 @@ import Contentimg1 from '../../../assets/Content1Img.svg'
 import Contentimg2 from '../../../assets/Content2Img.svg'
 import Contentimg3 from '../../../assets/Content3Img.svg'
 import Contentbg from '../../../assets/AnimatedShape.svg'
-import { CTAButton } from '../Hero/Herostyle'
+import Statsimg1 from '../../../assets/cpu.png'
+import Statsimg2 from '../../../assets/networking.png'
+import Statsimg3 from '../../../assets/cryptocurrency.png'
+import { Colorspan, CTAButton } from '../Hero/Herostyle'
 
 const Details = () => {
   return (
@@ -30,7 +33,7 @@ const Details = () => {
         <Stats>
 
           <StatsCard>
-            <Statsimg></Statsimg>
+            <Statsimg src={Statsimg1}></Statsimg>
             <Statscontent>
               <StatsHeader>
                 AML Technology
@@ -43,7 +46,7 @@ const Details = () => {
           </StatsCard>
 
           <StatsCard>
-            <Statsimg></Statsimg>
+            <Statsimg src={Statsimg2}></Statsimg>
             <Statscontent>
               <StatsHeader>
                 AML Outsourcing
@@ -56,7 +59,7 @@ const Details = () => {
           </StatsCard>
 
           <StatsCard>
-            <Statsimg></Statsimg>
+            <Statsimg src={Statsimg3}></Statsimg>
             <Statscontent>
               <StatsHeader>
                 Crypto Currencies
@@ -74,7 +77,7 @@ const Details = () => {
           <InnerdivContent>
           <Imgdiv src={Contentimg1}></Imgdiv>
           <Contentdiv>
-            <ContentHeader>The Current Challenges</ContentHeader>
+            <ContentHeader>The Current <Colorspan> Challenges</Colorspan></ContentHeader>
             <Contentphrase> Legal requirements and recent developments compel financial Institutions 
               to adopt comprehensive and effective risk-based controls to prevent misuse by money 
               launderers or purveyors of terrorist acts.

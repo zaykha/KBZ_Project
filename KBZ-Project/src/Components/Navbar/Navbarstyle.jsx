@@ -1,6 +1,36 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
+export const SearchSection = styled.div`
+   display: flex;
+   align-items: center;
+    
+`;
+export const SearchInput = styled.div`
+    width: 400px;
+    height: 40px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 0 20px;
+    opacity: ${({ ShowSearch }) => (ShowSearch ? '0' : '100%')};
+    transition: 0.8s ease-in-out;
+
+`;
+export const SearchIcon = styled.div`
+    width: 40px;
+    height: 40px;
+    color: grey;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    &:hover {
+        color: #015EB9;
+        transform: scale(1.2);
+    }
+`;
 export const Ads = styled.div`
     height: 24px;
     width: 100%;
@@ -43,12 +73,7 @@ export const NavbarContainer = styled.div`
     height: 80px;
     z-index: 1;
     width: 65%;
-    margin-left: 5%;
-
-    // margin-left: 35rem;
-    // padding: 0 24px;
-    // max-width: 1100px;
-    // border: 1px solid red;
+    margin: auto;
 `;
 
 export const NavLogo= styled(LinkR)`

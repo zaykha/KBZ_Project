@@ -27,8 +27,8 @@ const HomePage = () => {
         <Services/>
         <Clients/>
         <PlatformCTA/>
-        {/* <ApiCarousel/> */}
-        <Newslettersub/>
+        <ApiCarousel/>
+        {/* <Newslettersub/> */}
         <Footer/>
     </>
   )

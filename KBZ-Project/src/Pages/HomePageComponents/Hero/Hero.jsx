@@ -1,12 +1,13 @@
 import React from 'react'
-import { BGcolor, CTADiv, HeroIMG, Outerdiv, CTAButton, Heroh1, Herosmall, Colorspan } from './Herostyle'
+import { BGcolor, CTADiv, HeroIMG, Outerdiv, CTAButton, Heroh1, Herosmall, Colorspan, InnerDiv } from './Herostyle'
 import Heroimage from '../../../assets/HeroImage.svg'
 
 const Hero = () => {
   return (
-    <>
-    <BGcolor></BGcolor>
+    
+    
     <Outerdiv>
+      <InnerDiv>
         <CTADiv>
             <Heroh1>
                 <Colorspan>KBZ Money </Colorspan> compass anti money laundering technology and services redefined</Heroh1>
@@ -14,8 +15,10 @@ const Hero = () => {
             <CTAButton>Get Started</CTAButton>
         </CTADiv>
         <HeroIMG src={Heroimage}></HeroIMG>
+        </InnerDiv>
     </Outerdiv>
-    </>
+    
+   
   )
 }
 

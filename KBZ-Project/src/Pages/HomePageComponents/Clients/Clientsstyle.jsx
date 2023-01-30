@@ -5,7 +5,7 @@ export const ClientDiv = styled.div`
     height: auto;
     // border: 1px solid red;
     position: relative;
-    top:-17rem;
+    // top:-17rem;
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -13,48 +13,51 @@ export const ClientDiv = styled.div`
 `;
 
 export const ClientHeader = styled.div`
-    font-size: 3rem;
-    margin: 50px auto;
+    font-size: 2rem;
+    margin: 50px auto 20px auto;
 `;
 
 export const ClientPhrase = styled.div`
-    width: 40%;
+    width: 700px;
+    font-size: 0.8rem;
+
     margin: 20px auto;
     text-align: center;
 `;
 
 export const ClientCardDiv = styled.div`
-    width: 60%;
+    width: 1000px;
     display: flex;
     margin: 40px auto;
     flex-wrap:wrap;
     // border: 1px solid red;
 `;
 export const ClientCard = styled.div`
-    width: 20%;
+    width: 230px;
     height: auto;
     margin: 20px auto;
     // border:1px solid red;
     
-    background: rgba(225,225,225,0.5);
+    background: white;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 `;
 export const ClientImg = styled.img`
-    width: 100%;
-    height: 200px;
-    border: none;
-    margin: 0 0 20px 0;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto 10px 20px;
+    // border:1px solid red;
 `;
 export const CDescriptionHeader = styled.div`
     width: 80%;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     border-bottom: 1px solid grey;
     margin: auto;
 `;
-export const CDescription = styled.div`
+export const CDescription = styled.div` 
+    font-size: 0.7rem;
     margin: 20px auto;
     color:grey;
 
