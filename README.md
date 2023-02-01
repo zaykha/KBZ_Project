@@ -9,6 +9,7 @@ firebase ^9.16.0
 After cloning from git-hub run
 
 cd KBZ-Project
+npm i
 npm run dev
 
 Dev environment can be run on mobile devices connected to same wifi via other network shown after npm run dev.
