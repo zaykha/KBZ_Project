@@ -24,6 +24,11 @@ export const ServicesPhrase = styled.div`
 
     margin: 10px auto;
     text-align: center;
+    @media screen and (max-width:1000px){
+        width: 80%;
+        position: relative;
+        padding:0;
+    }
 `;
 
 export const ServicesCardDiv = styled.div`
@@ -31,6 +36,11 @@ export const ServicesCardDiv = styled.div`
     display:flex;
     margin: 40px auto;
     flex-wrap:wrap;
+    @media screen and (max-width:1000px){
+        width: 100%;
+        position: relative;
+        padding:0;
+    }
 `;
 export const ServicesCard = styled.div`
     width: 30%;
@@ -45,6 +55,12 @@ export const ServicesCard = styled.div`
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
 	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+    @media screen and (max-width:1000px){
+        width: 90%;
+        margin: 10px auto;
+        position: relative;
+        padding:0;
+    }
 `;
 export const ServicesImg = styled.img`
     width: 4rem;

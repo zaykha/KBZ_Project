@@ -4,7 +4,10 @@ import { Link as LinkR } from "react-router-dom";
 export const SearchSection = styled.div`
    display: flex;
    align-items: center;
-    
+
+   @media screen and (max-width: 768px){
+    display: none;
+   }
 `;
 export const SearchInput = styled.div`
     width: 400px;
@@ -61,6 +64,7 @@ export const Nav = styled.nav`
     position: sticky;
     top:0;
     z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     // background: linear-gradient(90deg, rgba(9,11,50,1) 0%, rgb(25,28,38) 100%);
     
     @media screen and (max-width: 960px) {
@@ -86,6 +90,7 @@ export const NavLogo= styled(LinkR)`
     // margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+    z-index: 11;
     // border-radius: 5px;
 
 `;
@@ -111,7 +116,8 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: white;
+        color: black;
+        z-index:11;
     }
 `
 export const NavMenu = styled.ul`
@@ -155,5 +161,13 @@ export const NavLinks = styled(LinkR)`
     &.active{
         border-bottom: 3px solid #015EB9;
     }
+`;
+export const SmallStyled = styled.div`
+    font-size: 0.7rem;
+    color: black;
+    font-style: italic;
+    position: relative;
+    top:-10px;
+    left: 2px;
 `
 

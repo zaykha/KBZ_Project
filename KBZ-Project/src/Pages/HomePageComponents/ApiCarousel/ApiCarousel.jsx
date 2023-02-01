@@ -1,4 +1,4 @@
-import React,{useState,createContext} from 'react'
+import React,{useState,useEffect} from 'react'
 import { 
   AuthorDetail,
   AuthorName,
@@ -17,87 +17,31 @@ import {
   CarouselDiv, 
   CarouselHeader, 
   CarouselOuterDiv, 
+  CarouselPhrase, 
   CarouselViewer,  
   LeftArrow, 
   RightArrow, 
   Slide, 
 
 } from './ApiCarouselstyle';
+import { getDocs, collection, deleteDoc, doc } from 'firebase/firestore'
+import { auth, db, storage } from '../../../firebase';
 
 // export const CarouselDivContext = createContext();
 const ApiCarousel = () => {
-
+  const [postList, setpostList] = useState([]);
   const [CurrentIndex, setCurrentIndex] = useState(0);
-
-  const APIdata = [
-  {
-    imageurl:"1",
-    title:"Money",
-    AurthorProfile:"a",
-    AuthorName: "2ef",
-    AuthoredDate:"sdf",
-    AuthorContent:"ae",
-  },
-  {
-    imageurl:"2",
-    title:"M2",
-    AurthorProfile:"a",
-    AuthorName: "2ef",
-    AuthoredDate:"sdg",
-    AuthorContent:"ae",
-  },
-  {
-    imageurl:"3",
-    title:"M3",
-    AurthorProfile:"badf",
-    AuthorName: "2ef",
-    AuthoredDate:"aser",
-    AuthorContent:"aerqewr",
-  },
-  {
-    imageurl:"4",
-    title:"asdfqw",
-    AurthorProfile:"asdfeqb",
-    AuthorName: "2ef",
-    AuthoredDate:"rykughnd",
-    AuthorContent:"asvwene",
-  },
-  {
-    imageurl:"5",
-    title:"M5",
-    AurthorProfile:"asbrqrt",
-    AuthorName: "2ef",
-    AuthoredDate:"avaerqt",
-    AuthorContent:"asdfwqvr",
-  },
-  {
-    imageurl:"5",
-    title:"M5",
-    AurthorProfile:"asbrqrt",
-    AuthorName: "2ef",
-    AuthoredDate:"avaerqt",
-    AuthorContent:"asdfwqvr",
-  },
-  {
-    imageurl:"5",
-    title:"M5",
-    AurthorProfile:"asbrqrt",
-    AuthorName: "2ef",
-    AuthoredDate:"avaerqt",
-    AuthorContent:"asdfwqvr",
-  },
-  {
-    imageurl:"5",
-    title:"M5",
-    AurthorProfile:"asbrqrt",
-    AuthorName: "2ef",
-    AuthoredDate:"avaerqt",
-    AuthorContent:"asdfwqvr",
+  const BlogCollectionRef = collection(db,'blog');
+  const [loading, setLoading]= useState(false);
+  const getPosts = async()=>{
+    setLoading(false);
+    const data = await getDocs(BlogCollectionRef);
+    setpostList(data.docs.map((doc)=>({...doc.data()})));
+    setLoading(false);
   }
-  ]
 
   const goToPrevious =()=>{
-    const Lengthofdiv=APIdata.length*300-900;
+    const Lengthofdiv=postList.length*300-900;
     const limit=-Math.abs(Lengthofdiv);
     CurrentIndex==0?
     setCurrentIndex(limit):
@@ -106,14 +50,17 @@ const ApiCarousel = () => {
   }
 
   const goToNext =()=>{
-    const Lengthofdiv=APIdata.length*300-900;
+    const Lengthofdiv=postList.length*300-900;
     const limit=-Math.abs(Lengthofdiv);
     CurrentIndex==limit?
     setCurrentIndex(0):
     setCurrentIndex(CurrentIndex-300);
     console.log(CurrentIndex);
   }
-
+  useEffect(()=>{
+    getPosts();
+    
+  },[]);
   return (
     <CarouselOuterDiv>
     <CarouselHeader>KBZ Money Alerts</CarouselHeader>
@@ -122,20 +69,20 @@ const ApiCarousel = () => {
        <CarouselViewer>
         <CarouselDiv CurrentIndex={CurrentIndex}> 
       
-        {APIdata.map((a,index)=>{
+        {postList.map((a,index)=>{
           return(
           <Slide key={index}>
           <BlogCard>
-            <BlogImage>{a.imageurl}</BlogImage>
+            <BlogImage></BlogImage>
               <BlogCHeader>{a.title}</BlogCHeader>
                 <BlogDetails>
                   <AuthorDetail>
-                    <AuthorProfile>{a.AurthorProfile}</AuthorProfile>
-                    <AuthorName>{a.AuthorName}</AuthorName>
+                    <AuthorProfile></AuthorProfile>
+                    <AuthorName>{a.author}</AuthorName>
                   </AuthorDetail>
-                  <DatePosted>{a.AuthoredDate}</DatePosted>
+                  <DatePosted>{a.authoredDate}</DatePosted>
                 </BlogDetails>
-            <BlogPhrase>{a.AuthorContent}</BlogPhrase>
+            <CarouselPhrase>{a.content}</CarouselPhrase>
             <BlogCTA>Read More</BlogCTA>
         </BlogCard>
         </Slide>

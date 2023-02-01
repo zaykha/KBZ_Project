@@ -15,6 +15,11 @@ export const ClientDiv = styled.div`
 export const ClientHeader = styled.div`
     font-size: 2rem;
     margin: 50px auto 20px auto;
+    @media screen and (max-width: 1000px){
+        width: 90%;
+        text-align: center;
+        line-height:1.1;
+    }
 `;
 
 export const ClientPhrase = styled.div`
@@ -23,6 +28,11 @@ export const ClientPhrase = styled.div`
 
     margin: 20px auto;
     text-align: center;
+    @media screen and (max-width: 1000px){
+        width: 90%;
+        text-align: center;
+        
+    }
 `;
 
 export const ClientCardDiv = styled.div`
@@ -31,6 +41,11 @@ export const ClientCardDiv = styled.div`
     margin: 40px auto;
     flex-wrap:wrap;
     // border: 1px solid red;
+    @media screen and (max-width: 1000px){
+        width: 100%;
+        text-align: center;
+        
+    }
 `;
 export const ClientCard = styled.div`
     width: 230px;

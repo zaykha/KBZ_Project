@@ -3,7 +3,7 @@ import {FaBars, FaSearch} from 'react-icons/fa';
 import { Ads, AdsContainer, IMGTAG, Nav, NavbarContainer, NavLogo, Imgicon, MobileIcon, NavMenu, NavItem, NavLinks, SearchSection, SearchInput, SearchIcon } from './Navbarstyle';
 import logo from '../../assets/KBZ_Bank_logo.svg.png'
 
-const Navbar = (togglesidebar) => {
+const Navbar = ({togglesidebar}) => {
    const [ShowSearch, setShowSearch] = useState(true);
 
    const toggleshowsearch = ()=>{

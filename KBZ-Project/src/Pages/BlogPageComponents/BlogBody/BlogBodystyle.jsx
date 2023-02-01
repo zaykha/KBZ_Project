@@ -7,11 +7,16 @@ export const BlogBHeader = styled.div`
     font-size: 2rem;
 `;
 export const BlogContentDiv = styled.div`
-    width: 900px;
+    width: 80%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     margin: 40px auto;
+    @media screen and (max-width: 1000px;){
+        width: 100vw;
+        overflow:hidden;
+       border: 1px solid red;
+}
 
 `;
 export const BlogContent = styled.div`
@@ -20,11 +25,19 @@ export const BlogContent = styled.div`
     margin:  0 auto;
     display: flex;
     flex-wrap: wrap;
+    @media screen and (max-width: 1000px;){
+        width: 100%;
+       
+}
 `;
 export const BlogSidebar = styled.div`
     width: 270px;
     height: auto;
     margin: 20px auto;
+    @media screen and (max-width: 1000px;){
+        width: 100%;
+       
+}
 `;
 export const BlogCard = styled.div`
     width: 280px;
@@ -38,7 +51,7 @@ export const BlogCard = styled.div`
 export const BlogImage = styled.div`
     width: 280px;
     height: 250px;
-    background: rgba(0,225,225,0.7);
+    background: white;
     margin: 0 auto 20px auto;
     border-radius: 5px 5px 0 0;
 `;

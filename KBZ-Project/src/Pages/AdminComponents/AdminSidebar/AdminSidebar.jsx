@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
 import { FaSearch } from 'react-icons/fa';
-import { SearchIcon, SearchInput } from '../Navbar/Navbarstyle';
+import { SearchIcon, SearchInput } from '../../../Components/Navbar/Navbarstyle';
+
 
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SearchSection } from './Sidebarstyle';
 
-const Sidebar = ({togglesidebar, isOpen}) => {
+const AdminSidebar = ({togglesidebar, isOpen}) => {
     const [ShowSearch, setShowSearch] = useState(true);
 
    const toggleshowsearch = ()=>{
@@ -17,12 +18,12 @@ const Sidebar = ({togglesidebar, isOpen}) => {
     </Icon>
         <SidebarWrapper>
             <SidebarMenu>
-                <SidebarLink to='/' onClick={togglesidebar}>
-                    Home
+                <SidebarLink to='/CreateBlog' onClick={togglesidebar}>
+                    Create
                 </SidebarLink>
 
-                <SidebarLink to='/BlogPage' onClick={togglesidebar}>
-                    Blog
+                <SidebarLink to='/MyBlogs' onClick={togglesidebar}>
+                    MyBlogs
                 </SidebarLink>
 
                 
@@ -40,4 +41,4 @@ const Sidebar = ({togglesidebar, isOpen}) => {
 
     );
 };
-export default Sidebar
+export default AdminSidebar

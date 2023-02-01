@@ -6,7 +6,7 @@ export const SidebarContainer = styled.aside`
     position:fixed;
     z-index: 999;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     box-sizing:border-box;
     background: white;
     display: flex;

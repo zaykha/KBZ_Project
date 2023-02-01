@@ -6,6 +6,10 @@ export const Outerdiv = styled.div`
     padding-top: 100px;
     background: linear-gradient(90deg, #e2f1f7 0%, #d3edf7 100%);
     // padding-bottom: 100px;
+    @media screen and (max-width:1000px){
+        height: auto;
+        padding-top:20px;
+    }
 `;
 export const InnerDiv = styled.div`
     width: 1000px;
@@ -14,6 +18,10 @@ export const InnerDiv = styled.div`
     align-items: center;
     flex-wrap:wrap;
     margin: auto;
+    @media screen and (max-width:1000px){
+        width:100%;
+        margin: 10px auto;
+    }
 `;
 export const CTADiv = styled.div`
     width: 500px;
@@ -27,7 +35,7 @@ export const HeroIMG = styled.img`
     width: 400px;
     Margin: 0 20px;
     // border: solid red 1px;
-    @media screen and (max-width:768px){
+    @media screen and (max-width:1000px){
         width:50%;
     }
 `;

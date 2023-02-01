@@ -17,6 +17,7 @@ export const FooterInnerdiv = styled.div`
     width: 70%;
     // height: 300px;
     display: flex;
+    flex-wrap:wrap;
     // align-items: center;
     // justify-content: center;
     margin: 40px auto;

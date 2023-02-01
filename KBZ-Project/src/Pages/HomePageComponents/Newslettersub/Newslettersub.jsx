@@ -1,7 +1,7 @@
 import React from 'react'
 import { Contentdiv, ContentHeader2, InnerdivContent } from '../Details/Detailsstyle'
 import { CTAButton } from '../Hero/Herostyle'
-import { OuterdivNewsletter } from './Newslettersubstyle'
+import { NewsInput, OuterdivNewsletter } from './Newslettersubstyle'
 
 const Newslettersub = () => {
   return (
@@ -14,7 +14,7 @@ const Newslettersub = () => {
       </Contentdiv>
 
       <Contentdiv>
-        <input type="text" name="" id="" placeholder="Email address"/>
+        <NewsInput type="text" name="" id="" placeholder="Email address"/>
         <CTAButton>Subscribe</CTAButton>
       </Contentdiv>
 

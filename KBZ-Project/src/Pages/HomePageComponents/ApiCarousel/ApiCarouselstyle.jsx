@@ -13,13 +13,30 @@ export const CarouselContainer = styled.div`
   display: flex;
 //   border: 1px solid red;
   margin: 20px auto 20px;
+  @media screen and (max-width: 1200px){
+    width: 90%;
+    text-align: center;
+    
+}
 `;
 
 export const CarouselViewer = styled.div`
   width: 890px;
   margin: auto;
   overflow: hidden;
+  @media screen and (max-width: 890px){
+    width: 90%;
+    text-align: center;
+    
+}
 `;
+export const CarouselPhrase = styled.div`
+  width: 80%;
+  height: 300px;
+  margin: 20px auto;
+  font-size: 0.9rem;
+  overflow: hidden;
+`
 export const CarouselDiv = styled.div`
 
   display: flex;
@@ -35,6 +52,7 @@ export const CarouselDiv = styled.div`
 
 export const Slide = styled.div`
     width: 280px;
+    height: 800px;
     margin-right: 20px;
     // border: 1px solid green;
     // color: white;
@@ -68,6 +86,11 @@ margin: 20px auto 40px auto;
 background: #ff545f;
 color: white;
 border-radius: 10rem;
+@media screen and (max-width: 1200px;){
+  margin: 10px auto 30px auto;
+  
+}
+
 `;
 export const CarouselOuterDiv = styled.div`
     display: flex;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
+import { UploadCTA } from '../../AdminComponents/CreateBlog/CreateBlogstyle'
 import { 
     AuthorDetail,
     AuthorName,
@@ -34,9 +35,34 @@ import {
     Tag,
     Tagdiv,
     TagInflowdiv
-} from './BlogBodystyle'
+} from './BlogBodystyle';
+import { db } from '../../../firebase';
+import { collection } from 'firebase/firestore';
 
 const BlogBody = () => {
+    const [Expand, setExpand] = useState(false);
+
+    const toggleExpand = ()=>{
+        setExpand(!Expand);
+    }
+    ;
+    const [subCategories, setSubCategories] = useState([]);
+    
+  useEffect(() => {
+    try{
+    const fetchSubCategories = async () => {
+      const subCategoriesRef = db.collection("blog").orderBy("tag", "asc");
+      const subCategoriesSnapshot = await subCategoriesRef.get();
+
+      setSubCategories(subCategoriesSnapshot.docs.map(doc => doc.data()));}
+      console.log(subCategories);
+      fetchSubCategories();
+    } catch(error){
+        console.error(error)
+    };
+
+   
+  }, []);
   return (
     <>
         <BlogBHeader>Latest News</BlogBHeader>
@@ -95,6 +121,60 @@ const BlogBody = () => {
                     <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
                     <BlogCTA>Read More</BlogCTA>
                 </BlogCard>
+                
+
+                {Expand?
+                <>
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+
+                <BlogCard>
+                    <BlogImage></BlogImage>
+                    <BlogCHeader>hello</BlogCHeader>
+                    <BlogDetails>asdfaer</BlogDetails>
+                    <BlogPhrase>asdfaefarwqefasvarveqrt qwert qrtqweq wer</BlogPhrase>
+                    <BlogCTA>Read More</BlogCTA>
+                </BlogCard>
+                </>:<></>
+                 }
+                 <UploadCTA onClick={toggleExpand}>Read More</UploadCTA>
             </BlogContent>
 
 
@@ -153,13 +233,18 @@ const BlogBody = () => {
                 <Tagdiv>
                 <CardHeader>Tag</CardHeader>
                     <TagInflowdiv>
-                        <Tag>Money alerts</Tag>
+                    {subCategories.map(subCategory => (
+                        <Tag key={subCategory.id}>
+                            {subCategory.name}
+                        </Tag>
+                    ))}
+                        {/* <Tag>Money alerts</Tag>
                         <Tag>News</Tag>
                         <Tag>Technology</Tag>
                         <Tag>crypto-currencies</Tag>
                         <Tag>AML Outsourcing</Tag>
                         <Tag>AML Services</Tag>
-                        <Tag>Support</Tag>
+                        <Tag>Support</Tag> */}
                     </TagInflowdiv>
                 </Tagdiv>
 

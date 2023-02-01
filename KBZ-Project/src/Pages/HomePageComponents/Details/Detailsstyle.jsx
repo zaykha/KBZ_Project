@@ -11,6 +11,12 @@ export const Stats = styled.div`
     z-index:4;
     display:flex;
     flex-wrap:wrap;
+    @media screen and (max-width:1000px){
+        width: 100%;
+        position: relative;
+        top:0;
+        transform: translate(0%,0%);
+    }
 `;
 export const Statsimg = styled.img`
     width: 4rem;
@@ -37,6 +43,13 @@ export const StatsCard= styled.div`
         color:white;
         box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
         cursor:pointer;
+    }
+    @media screen and (max-width:1000px){
+        width: 90%;
+        margin:10px auto;
+        position: relative;
+        top:0;
+        transform: translate(0%,0%);
     }
 `;
 export const Statscontent = styled.div`
@@ -85,13 +98,24 @@ export const InnerdivContent = styled.div`
     margin: 40px auto;
     // border: 1px solid green;
     display: flex;
+    flex-wrap:wrap;
     padding: 30px;
+    @media screen and (max-width:1000px){
+        width: 100%;
+        position: relative;
+        padding:0;
+    }
 `;
 export const Imgdiv = styled.img`
     width: 40%;
     height: auto;
     margin: auto;
     // border: 1px solid red;
+    @media screen and (max-width:1000px){
+        width: 50%;
+        position: relative;
+        padding:0;
+    }
 `;
 export const Contentdiv = styled.div`
     width: 40%;
@@ -99,6 +123,11 @@ export const Contentdiv = styled.div`
     margin: auto;
     // border: 1px solid red;
     padding: 20px;
+    @media screen and (max-width:1000px){
+        width: 80%;
+        position: relative;
+        padding:0;
+    }
 `;
 export const ContentHeader2 = styled.div`
     font-size: 1.5rem;
@@ -130,4 +159,8 @@ export const ContentImg = styled.img`
     position: absolute;
     object-fit: fill;
     z-index: -2;
+    @media screen and (max-width:1000px){
+        height: 100%;
+        object-fit:cover;
+    }
 `;
