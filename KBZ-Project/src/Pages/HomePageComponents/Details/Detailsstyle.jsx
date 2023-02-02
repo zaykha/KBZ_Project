@@ -5,9 +5,11 @@ export const Stats = styled.div`
     height: auto;
     // border: 1px solid red;
     // margin: auto;
-    position:absolute;
-    top: 90vh;
-    transform: translate(35%,0);
+    position:relative;
+    top: -100px;
+    margin: auto;
+    // top: 90vh;
+    // transform: translate(35%,0);
     z-index:4;
     display:flex;
     flex-wrap:wrap;
@@ -82,7 +84,10 @@ export const OuterdivContent1 = styled.div`
     // border: 1px solid green;
     padding-top: 5%;
     position:relative;
-    // top:-17rem;
+    top:-100px;
+    @media screen and (max-width:1000px){
+        top:0;
+    }
 `;
 export const OuterdivContent = styled.div`
     width:100%;
